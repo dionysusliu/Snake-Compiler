@@ -1,0 +1,7 @@
+/* Garter tests */
+let a = 3 in 
+let b = 4.0 in 
+let PRINT_1 = print(a + b) in  # 7.0
+let PRINT_2 = print(a - b) in  # -1.0
+let PRINT_3 = print(a * b) in  # 12.0
+print(a / b) 				   # 0.75

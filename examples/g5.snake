@@ -1,0 +1,4 @@
+/* Garter tests */
+let pi = 3.1415926 in 
+let a = 1.2 in 
+pi + a 			# output is 4.3415926

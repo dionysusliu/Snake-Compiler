@@ -1,0 +1,2 @@
+/* Garter tests */
+2 / 0.0  # invalid, raise runtime error "divided by zero"

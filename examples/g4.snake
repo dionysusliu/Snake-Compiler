@@ -1,0 +1,5 @@
+/* Garter tests */
+if (1.0): # invalid, raise runtime error "expected a boolean but got a number"
+	1.0
+else:
+	0

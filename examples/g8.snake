@@ -1,0 +1,9 @@
+/* Garter tests */
+let a = 10.0 in
+let b = 10000000 in
+def mul(a, b):
+	if b == 0:
+		a
+	else:
+		mul(a * a, b-1)   # invalid, it will terminate by raising runtime error "overflow"
+mul(a, b)

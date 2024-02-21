@@ -1,0 +1,4 @@
+/* Garter tests */
+let a = 1 in 
+let b = 2 in 
+1.0 + (a < b) # invalid, raise runtime error "arithmetic expected a number but got a boolean"

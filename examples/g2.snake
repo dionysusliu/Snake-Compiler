@@ -1,0 +1,5 @@
+/* Garter tests */
+if (1 > true): # invalid, raise runtime error "comparison expected an integer but got a boolean"
+	1
+else:
+	true 

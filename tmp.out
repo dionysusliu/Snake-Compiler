@@ -1,0 +1,575 @@
+defs
+[
+    FunDecl {
+        name: "is_even#3",
+        parameters: [
+            "initial_value#1",
+            "x#3",
+        ],
+        body: Let {
+            bindings: [
+                (
+                    "SIDE_EFFECT#4",
+                    Prim(
+                        Print,
+                        [
+                            Num(
+                                90,
+                                (),
+                            ),
+                        ],
+                        (),
+                    ),
+                ),
+            ],
+            body: If {
+                cond: Prim(
+                    Eq,
+                    [
+                        Var(
+                            "x#3",
+                            (),
+                        ),
+                        Num(
+                            0,
+                            (),
+                        ),
+                    ],
+                    (),
+                ),
+                thn: Bool(
+                    true,
+                    (),
+                ),
+                els: If {
+                    cond: Prim(
+                        Eq,
+                        [
+                            Var(
+                                "x#3",
+                                (),
+                            ),
+                            Num(
+                                1,
+                                (),
+                            ),
+                        ],
+                        (),
+                    ),
+                    thn: Bool(
+                        false,
+                        (),
+                    ),
+                    els: ExternalCall {
+                        fun_name: "is_even#3",
+                        args: [
+                            Var(
+                                "initial_value#1",
+                                (),
+                            ),
+                            Prim(
+                                Sub,
+                                [
+                                    Var(
+                                        "x#3",
+                                        (),
+                                    ),
+                                    Num(
+                                        2,
+                                        (),
+                                    ),
+                                ],
+                                (),
+                            ),
+                        ],
+                        is_tail: true,
+                        ann: (),
+                    },
+                    ann: (),
+                },
+                ann: (),
+            },
+            ann: (),
+        },
+        ann: (),
+    },
+    FunDecl {
+        name: "div#21",
+        parameters: [
+            "initial_value#1",
+            "a#21",
+            "b#21",
+            "acc#21",
+        ],
+        body: Let {
+            bindings: [
+                (
+                    "SIDE_EFFECT#22",
+                    Prim(
+                        Print,
+                        [
+                            Num(
+                                91,
+                                (),
+                            ),
+                        ],
+                        (),
+                    ),
+                ),
+            ],
+            body: Let {
+                bindings: [
+                    (
+                        "SIDE_EFFECT#25",
+                        Prim(
+                            Print,
+                            [
+                                Var(
+                                    "a#21",
+                                    (),
+                                ),
+                            ],
+                            (),
+                        ),
+                    ),
+                ],
+                body: Let {
+                    bindings: [
+                        (
+                            "SIDE_EFFECT#28",
+                            Prim(
+                                Print,
+                                [
+                                    Var(
+                                        "b#21",
+                                        (),
+                                    ),
+                                ],
+                                (),
+                            ),
+                        ),
+                    ],
+                    body: Let {
+                        bindings: [
+                            (
+                                "SIDE_EFFECT#31",
+                                Prim(
+                                    Print,
+                                    [
+                                        Var(
+                                            "acc#21",
+                                            (),
+                                        ),
+                                    ],
+                                    (),
+                                ),
+                            ),
+                        ],
+                        body: If {
+                            cond: Prim(
+                                Eq,
+                                [
+                                    Prim(
+                                        Mul,
+                                        [
+                                            Var(
+                                                "b#21",
+                                                (),
+                                            ),
+                                            Var(
+                                                "acc#21",
+                                                (),
+                                            ),
+                                        ],
+                                        (),
+                                    ),
+                                    Var(
+                                        "a#21",
+                                        (),
+                                    ),
+                                ],
+                                (),
+                            ),
+                            thn: Var(
+                                "acc#21",
+                                (),
+                            ),
+                            els: ExternalCall {
+                                fun_name: "div#21",
+                                args: [
+                                    Var(
+                                        "initial_value#1",
+                                        (),
+                                    ),
+                                    Var(
+                                        "a#21",
+                                        (),
+                                    ),
+                                    Var(
+                                        "b#21",
+                                        (),
+                                    ),
+                                    Prim(
+                                        Add,
+                                        [
+                                            Var(
+                                                "acc#21",
+                                                (),
+                                            ),
+                                            Num(
+                                                1,
+                                                (),
+                                            ),
+                                        ],
+                                        (),
+                                    ),
+                                ],
+                                is_tail: true,
+                                ann: (),
+                            },
+                            ann: (),
+                        },
+                        ann: (),
+                    },
+                    ann: (),
+                },
+                ann: (),
+            },
+            ann: (),
+        },
+        ann: (),
+    },
+    FunDecl {
+        name: "base_case#47",
+        parameters: [
+            "initial_value#1",
+            "x#47",
+        ],
+        body: Let {
+            bindings: [
+                (
+                    "SIDE_EFFECT#48",
+                    Prim(
+                        Print,
+                        [
+                            Num(
+                                92,
+                                (),
+                            ),
+                        ],
+                        (),
+                    ),
+                ),
+            ],
+            body: If {
+                cond: Prim(
+                    Or,
+                    [
+                        Prim(
+                            Eq,
+                            [
+                                Var(
+                                    "x#47",
+                                    (),
+                                ),
+                                Num(
+                                    1,
+                                    (),
+                                ),
+                            ],
+                            (),
+                        ),
+                        Prim(
+                            Eq,
+                            [
+                                Var(
+                                    "x#47",
+                                    (),
+                                ),
+                                Num(
+                                    2,
+                                    (),
+                                ),
+                            ],
+                            (),
+                        ),
+                    ],
+                    (),
+                ),
+                thn: Bool(
+                    true,
+                    (),
+                ),
+                els: If {
+                    cond: Prim(
+                        Eq,
+                        [
+                            Var(
+                                "x#47",
+                                (),
+                            ),
+                            Num(
+                                4,
+                                (),
+                            ),
+                        ],
+                        (),
+                    ),
+                    thn: Bool(
+                        true,
+                        (),
+                    ),
+                    els: Bool(
+                        false,
+                        (),
+                    ),
+                    ann: (),
+                },
+                ann: (),
+            },
+            ann: (),
+        },
+        ann: (),
+    },
+]
+main
+Let {
+    bindings: [
+        (
+            "initial_value#1",
+            Num(
+                6,
+                (),
+            ),
+        ),
+    ],
+    body: FunDefs {
+        decls: [
+            FunDecl {
+                name: "when_odd#66",
+                parameters: [
+                    "initial_value#1",
+                    "x#66",
+                ],
+                body: Let {
+                    bindings: [
+                        (
+                            "SIDE_EFFECT#67",
+                            Prim(
+                                Print,
+                                [
+                                    Num(
+                                        93,
+                                        (),
+                                    ),
+                                ],
+                                (),
+                            ),
+                        ),
+                    ],
+                    body: InternalTailCall(
+                        "collatz#66",
+                        [
+                            Var(
+                                "initial_value#1",
+                                (),
+                            ),
+                            Prim(
+                                Add,
+                                [
+                                    Prim(
+                                        Mul,
+                                        [
+                                            Num(
+                                                3,
+                                                (),
+                                            ),
+                                            Var(
+                                                "x#66",
+                                                (),
+                                            ),
+                                        ],
+                                        (),
+                                    ),
+                                    Num(
+                                        1,
+                                        (),
+                                    ),
+                                ],
+                                (),
+                            ),
+                        ],
+                        (),
+                    ),
+                    ann: (),
+                },
+                ann: (),
+            },
+            FunDecl {
+                name: "when_even#66",
+                parameters: [
+                    "initial_value#1",
+                    "x#66",
+                ],
+                body: Let {
+                    bindings: [
+                        (
+                            "SIDE_EFFECT#76",
+                            Prim(
+                                Print,
+                                [
+                                    Num(
+                                        94,
+                                        (),
+                                    ),
+                                ],
+                                (),
+                            ),
+                        ),
+                    ],
+                    body: InternalTailCall(
+                        "collatz#66",
+                        [
+                            Var(
+                                "initial_value#1",
+                                (),
+                            ),
+                            ExternalCall {
+                                fun_name: "div#21",
+                                args: [
+                                    Var(
+                                        "x#66",
+                                        (),
+                                    ),
+                                    Num(
+                                        2,
+                                        (),
+                                    ),
+                                    Num(
+                                        0,
+                                        (),
+                                    ),
+                                ],
+                                is_tail: false,
+                                ann: (),
+                            },
+                        ],
+                        (),
+                    ),
+                    ann: (),
+                },
+                ann: (),
+            },
+            FunDecl {
+                name: "collatz#66",
+                parameters: [
+                    "initial_value#1",
+                    "x#66",
+                ],
+                body: Let {
+                    bindings: [
+                        (
+                            "SIDE_EFFECT#84",
+                            Prim(
+                                Print,
+                                [
+                                    Var(
+                                        "x#66",
+                                        (),
+                                    ),
+                                ],
+                                (),
+                            ),
+                        ),
+                    ],
+                    body: If {
+                        cond: ExternalCall {
+                            fun_name: "base_case#47",
+                            args: [
+                                Var(
+                                    "initial_value#1",
+                                    (),
+                                ),
+                                Var(
+                                    "x#66",
+                                    (),
+                                ),
+                            ],
+                            is_tail: false,
+                            ann: (),
+                        },
+                        thn: Num(
+                            0,
+                            (),
+                        ),
+                        els: If {
+                            cond: ExternalCall {
+                                fun_name: "is_even#3",
+                                args: [
+                                    Var(
+                                        "initial_value#1",
+                                        (),
+                                    ),
+                                    Var(
+                                        "x#66",
+                                        (),
+                                    ),
+                                ],
+                                is_tail: false,
+                                ann: (),
+                            },
+                            thn: InternalTailCall(
+                                "when_even#66",
+                                [
+                                    Var(
+                                        "initial_value#1",
+                                        (),
+                                    ),
+                                    Var(
+                                        "x#66",
+                                        (),
+                                    ),
+                                ],
+                                (),
+                            ),
+                            els: InternalTailCall(
+                                "when_odd#66",
+                                [
+                                    Var(
+                                        "initial_value#1",
+                                        (),
+                                    ),
+                                    Var(
+                                        "x#66",
+                                        (),
+                                    ),
+                                ],
+                                (),
+                            ),
+                            ann: (),
+                        },
+                        ann: (),
+                    },
+                    ann: (),
+                },
+                ann: (),
+            },
+        ],
+        body: InternalTailCall(
+            "collatz#66",
+            [
+                Var(
+                    "initial_value#1",
+                    (),
+                ),
+                Var(
+                    "initial_value#1",
+                    (),
+                ),
+            ],
+            (),
+        ),
+        ann: (),
+    },
+    ann: (),
+}

@@ -1,0 +1,5 @@
+/* Garter tests */
+if (1.0 > 0): # invalid, raise runtime error "comparison expected an integer but got a floating point"
+	1.0
+else:
+	0
